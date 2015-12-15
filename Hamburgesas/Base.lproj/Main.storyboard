@@ -24,8 +24,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5o-qg-22p">
-                                <rect key="frame" x="75" y="269" width="171" height="30"/>
+                                <rect key="frame" x="48" y="266" width="224" height="36"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Quiero una Hamburgesa!"/>
+                                <connections>
+                                    <action selector="accionButon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ko7-U6-81q"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pais" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxu-a3-4gM">
                                 <rect key="frame" x="144" y="69" width="32" height="21"/>
@@ -33,21 +38,45 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w1L-ce-2sy">
+                                <rect key="frame" x="116" y="199" width="88" height="21"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precio $" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3B8-ah-sde">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PLs-Vh-LrX">
+                                        <rect key="frame" x="64" y="0.0" width="24" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="d5o-qg-22p" firstAttribute="top" secondItem="bxu-a3-4gM" secondAttribute="bottom" constant="179" id="BwJ-0J-wMc"/>
-                            <constraint firstItem="d5o-qg-22p" firstAttribute="top" secondItem="Gx2-bW-czC" secondAttribute="bottom" constant="111" id="FDH-XK-vtv"/>
-                            <constraint firstItem="d5o-qg-22p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PGp-j9-aeq"/>
-                            <constraint firstItem="Gx2-bW-czC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ccw-Ah-Is6"/>
-                            <constraint firstItem="bxu-a3-4gM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fhe-bo-W0I"/>
-                            <constraint firstItem="d5o-qg-22p" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wbR-44-G5s"/>
+                            <constraint firstItem="d5o-qg-22p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6r6-ZH-fND"/>
+                            <constraint firstItem="d5o-qg-22p" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="B12-jb-Sqx"/>
+                            <constraint firstItem="bxu-a3-4gM" firstAttribute="centerX" secondItem="Gx2-bW-czC" secondAttribute="centerX" id="DVe-e7-KaR"/>
+                            <constraint firstItem="bxu-a3-4gM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="49" id="Eg6-er-Y00"/>
+                            <constraint firstItem="Gx2-bW-czC" firstAttribute="centerX" secondItem="d5o-qg-22p" secondAttribute="centerX" id="PbC-RX-GfL"/>
+                            <constraint firstItem="w1L-ce-2sy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VWF-wO-Zvy"/>
+                            <constraint firstItem="w1L-ce-2sy" firstAttribute="top" secondItem="Gx2-bW-czC" secondAttribute="bottom" constant="41" id="jN5-Yh-XzY"/>
+                            <constraint firstItem="Gx2-bW-czC" firstAttribute="top" secondItem="bxu-a3-4gM" secondAttribute="bottom" constant="47" id="sgO-cQ-vJk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="etiquetaHamburguesa" destination="Gx2-bW-czC" id="Ejo-IU-1HH"/>
+                        <outlet property="etiquetaPais" destination="bxu-a3-4gM" id="d4m-9g-AsI"/>
+                        <outlet property="etiquetaPrecio" destination="PLs-Vh-LrX" id="Ict-K0-sTH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="129" y="310"/>
+            <point key="canvasLocation" x="119" y="335"/>
         </scene>
     </scenes>
 </document>
